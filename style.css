@@ -1,0 +1,427 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald";
+  font-size: 3vw;
+  line-height: 1.4em;
+  margin: 0 2em;
+  background-color: white;
+  color: white;
+  font-feature-settings: "kern" on;
+  -moz-font-feature-settings: "kern" on;
+  -webkit-font-feature-settings: "kern" on;
+  -ms-font-feature-settings: "kern" on;
+  -o-font-feature-settings: "kern" on;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background: black;
+}
+
+.batman {
+  position: relative;
+  top: 200px;
+  width: 210px;
+  height: 330px;
+  transition: all 2s cubic-bezier(0.83, 0, 0.17, 1) 0.2s;
+}
+
+.batman:hover {
+  transform: scale(-1) rotate(220deg);
+}
+
+.ear.left {
+  position: absolute;
+  width: 65px;
+  height: 70px;
+  background: #403f52;
+  border-radius: 100% 0 0 0;
+}
+
+.ear.right {
+  position: absolute;
+  width: 65px;
+  height: 70px;
+  background: #403f52;
+  border-radius: 0 100% 0 0;
+  left: 145px;
+}
+
+.middle {
+  position: absolute;
+  width: 210px;
+  height: 190px;
+  background: #403f52;
+  border-radius: 10px;
+  bottom: 79px;
+}
+
+.middle:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 10% 10% 0 0;
+  background: #eaeaf1;
+  top: 90px;
+  right: 53px;
+  margin: 0 auto;
+}
+
+.mouth {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: #403f52;
+  border-radius: 0 0 60% 60%;
+  left: 80px;
+  bottom: 120px;
+}
+
+.eye {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background: #eaeaf1;
+  border-radius: 50%;
+  top: 100px;
+  right: 30px;
+}
+
+.eye.left {
+  left: 35px;
+}
+
+h1 {
+  position: relative;
+  top: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: letter-spacing 1500ms ease-in-out;
+}
+
+h1:hover {
+  letter-spacing: 5px;
+}
+
+.letter {
+  font-variation-settings: "wght" 100, "wdth" 100;
+  transition: font-variation-settings 1500ms ease-in;
+}
+
+h1:hover .b,
+h1:hover .m {
+  font-variation-settings: "wght" 300, "wdth" 100;
+}
+
+h1:hover .a,
+h1:hover .n {
+  font-variation-settings: "wght" 500, "wdth" 100;
+}
+
+h1:hover .b,
+h1:hover .a,
+h1:hover .m {
+  font-variation-settings: "wght" 700, "wdth" 100;
+}
+
+h1:hover .b,
+h1:hover .a,
+h1:hover .t {
+  font-variation-settings: "wght" 900, "wdth" 100;
+}
+
+.buttons {
+  margin-top: 0px;
+}
+
+.iconiron {
+  position: relative;
+  right: 250px;
+  top: -200px;
+  animation-name: facego;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes facego {
+  0%,
+  100% {
+    transform: scale(1) rotate(0);
+  }
+  10%,
+  30% {
+    transform: scale(0.9) rotate(3deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  50%,
+  70% {
+    transform: scale(1.1) rotate(3deg);
+  }
+}
+.iconhulk {
+  position: relative;
+  bottom: 600px;
+  right: -275px;
+  animation-name: facego;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+h2 {
+  position: relative;
+  top: 30px;
+  right: 300px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: letter-spacing 1500ms ease-in-out;
+}
+
+h2:hover {
+  letter-spacing: 5px;
+}
+
+h3 {
+  position: relative;
+  top: 0px;
+  left: 300px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: letter-spacing 1500ms ease-in-out;
+}
+
+h3:hover {
+  letter-spacing: 5px;
+}
+
+.allflash {
+  width: 1200px;
+  height: 1000px;
+  border-radius: 100%;
+  z-index: -3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@keyframes falling {
+  0%,
+    100% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  0% {
+    transform: translate 100%, 0px;
+  }
+  100% {
+    transform: translate 0px, 100%;
+  }
+}
+.allflash [class*="flash"] {
+  background-color: #f9f992;
+  width: 3px;
+  height: 30px;
+  border-radius: 15px;
+  animation: falling 2s infinite;
+}
+.allflash .flash1 {
+  position: absolute;
+  left: 39.3958945825%;
+  top: 35.0683174609%;
+  animation-delay: -0.1s;
+}
+.allflash .flash2 {
+  position: absolute;
+  left: 92.4089917302%;
+  top: 17.6258424029%;
+  animation-delay: -0.2s;
+}
+.allflash .flash3 {
+  position: absolute;
+  left: 2.4249617942%;
+  top: -7.2079253973%;
+  animation-delay: -0.3s;
+}
+.allflash .flash4 {
+  position: absolute;
+  left: 69.1451301094%;
+  top: 22.9417907033%;
+  animation-delay: -0.4s;
+}
+.allflash .flash5 {
+  position: absolute;
+  left: 61.9445188958%;
+  top: 7.6660211179%;
+  animation-delay: -0.5s;
+}
+.allflash .flash6 {
+  position: absolute;
+  left: 95.0092224771%;
+  top: 76.8675844539%;
+  animation-delay: -0.6s;
+}
+.allflash .flash7 {
+  position: absolute;
+  left: 80.0670791356%;
+  top: 34.5965923546%;
+  animation-delay: -0.7s;
+}
+.allflash .flash8 {
+  position: absolute;
+  left: 2.0572572244%;
+  top: 24.9680476746%;
+  animation-delay: -0.8s;
+}
+.allflash .flash9 {
+  position: absolute;
+  left: 19.1268783664%;
+  top: 7.8504929264%;
+  animation-delay: -0.9s;
+}
+.allflash .flash10 {
+  position: absolute;
+  left: 30.5252657498%;
+  top: 10.3638726109%;
+  animation-delay: -1s;
+}
+.allflash .flash11 {
+  position: absolute;
+  left: 73.3238354881%;
+  top: 33.5506017102%;
+  animation-delay: -1.1s;
+}
+.allflash .flash12 {
+  position: absolute;
+  left: 91.8995108219%;
+  top: 38.3912587301%;
+  animation-delay: -1.2s;
+}
+.allflash .flash13 {
+  position: absolute;
+  left: 18.8071995696%;
+  top: 21.7562428454%;
+  animation-delay: -1.3s;
+}
+.allflash .flash14 {
+  position: absolute;
+  left: 88.9016812403%;
+  top: 62.7137808801%;
+  animation-delay: -1.4s;
+}
+.allflash .flash15 {
+  position: absolute;
+  left: 92.2226457863%;
+  top: 54.1920574186%;
+  animation-delay: -1.5s;
+}
+.allflash .flash16 {
+  position: absolute;
+  left: 63.2337114625%;
+  top: 21.0788677654%;
+  animation-delay: -1.6s;
+}
+.allflash .flash17 {
+  position: absolute;
+  left: 27.0426051729%;
+  top: 47.1829879004%;
+  animation-delay: -1.7s;
+}
+.allflash .flash18 {
+  position: absolute;
+  left: 90.9229651846%;
+  top: 67.5334648887%;
+  animation-delay: -1.8s;
+}
+.allflash .flash19 {
+  position: absolute;
+  left: 77.7096168212%;
+  top: 31.1469825586%;
+  animation-delay: -1.9s;
+}
+.allflash .flash20 {
+  position: absolute;
+  left: 94.3647980897%;
+  top: 54.2789051337%;
+  animation-delay: -2s;
+}
+.allflash .flash21 {
+  position: absolute;
+  left: 91.5443008733%;
+  top: 70.5860924007%;
+  animation-delay: -2.1s;
+}
+.allflash .flash22 {
+  position: absolute;
+  left: 86.5654847978%;
+  top: 64.1909538621%;
+  animation-delay: -2.2s;
+}
+.allflash .flash23 {
+  position: absolute;
+  left: 68.2898575768%;
+  top: 65.5578810812%;
+  animation-delay: -2.3s;
+}
+.allflash .flash24 {
+  position: absolute;
+  left: 25.736752979%;
+  top: 65.440491995%;
+  animation-delay: -2.4s;
+}
+
+.btn {
+  position: relative;
+  bottom: 600px;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.btn--like {
+  color: #fff;
+  padding-right: 0;
+  background-color: #c0392b;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+}
+
+.btn--like:hover {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+}
+
+.btn--like:after {
+  content: "it.";
+  color: #f9f9c7;
+  display: inline-block;
+  position: relative;
+  right: -55px;
+  transition: all 0.2s ease;
+}
+
+.btn--like:hover:after {
+  margin: -5px 15px;
+  right: 0px;
+}
+
+a {
+  color: initial;
+  text-decoration: initial;
+}
